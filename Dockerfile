@@ -1,11 +1,9 @@
-FROM google/cloud-sdk:alpine as base
+FROM google/cloud-sdk:alpine as BASE_stage
 
-RUN echo base stage
+RUN echo BASE_stage
 
-FROM base as TEST_stage
 
-RUN echo TEST_stage
 
-FROM base as final
+FROM BASE_stage as final
 
 RUN echo final stage
